@@ -1,0 +1,19 @@
+@use "../util" as *;
+
+body {
+    background: #4801ff;
+    transition: 1s ease-in;
+    transition-delay: 0.5s;
+}
+
+.transition-article-title {
+    transition: transform 3s;
+    transform: none;
+}
+.transition-in {
+    transition: 0.25s;
+}
+.transition-clicked {
+    transition: 2s ease-in;
+    transition-delay: 0.5s;
+}
