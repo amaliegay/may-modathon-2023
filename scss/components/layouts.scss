@@ -1,12 +1,45 @@
 @use "../util" as *;
 
 body {
-    background: #4801ff;
-    transition: 1s ease-in;
-    transition-delay: 0.5s;
+    font-size: 16px;
+    background: var(--color-purple);
+    transition: 1s ease-in 0.5s;
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-weight: 500;
 }
 
-.transition-article-title {
+.top-matter {
+    display: flex;
+    width: 90vw;
+    margin: 3em;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: row;
+
+    @include breakpoint_down(large) {
+        max-width: none;
+        margin-left: 1em;
+        flex-direction: column;
+    }
+}
+
+.title {
+    font-size: 70px;
+    line-height: 72px;
+}
+
+.week {
+    font-size: 70px;
+    line-height: 72px;
+    text-align: right;
+    @include breakpoint_down(large) {
+        max-width: none;
+        flex-direction: column;
+    }
+}
+
+.transition-mod-title {
     transition: transform 3s;
     transform: none;
 }
@@ -14,6 +47,5 @@ body {
     transition: 0.25s;
 }
 .transition-clicked {
-    transition: 2s ease-in;
-    transition-delay: 0.5s;
+    transition: 2s ease-in 0.5s;
 }
